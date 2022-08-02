@@ -13,27 +13,14 @@ class Person
   end
 
   attr_reader :id
-  attr_accessor :name, :age, :parent_permission
-
-  def get
-    {
-      'id' => @id,
-      'name' => @name,
-      'age' => @age
-    }
-  end
-
-  def set(name, age)
-    @name = name
-    @age = age
-  end
+  attr_accessor :name, :age
 
   def isof_age?
     @age > 18
   end
 
   def can_use_services?
-    @parent_permission == true || isof_age?
+    @parent_permission || isof_age?
   end
 
   private :isof_age?

@@ -1,5 +1,5 @@
 module Teacher
-  def initialize(specialization, age, parent_permission: true, name: 'Unknown')
+  def initialize(age, specialization, name: 'Unknown', parent_permission: true)
     super(name, age, parent_permission)
     @specialization = specialization
   end
