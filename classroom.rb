@@ -6,7 +6,7 @@ class Classroom
   def initialize(label)
     @label = label
   end
-  attr_accessor :label
+  attr_accessor :label, :students
 
   def add_student
     new.Student(@label)
@@ -17,11 +17,12 @@ class Book
   def initialize(title, author)
     @title = title
     @author = author
+    @rentals = []
   end
   attr_accessor :title, :author
 
-  def add_rental(date)
-    new.Rental(date)
+  def add_rental(date, person)
+    new.Rental(date, self, person)
   end
 end
 
