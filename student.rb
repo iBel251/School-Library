@@ -1,16 +1,18 @@
-module Student
-  attr_reader :classroom
+require_relative 'person'
 
-  def initialize(age, classroom, name: 'Unknown', parent_permission: true)
-    super(age, name, parent_permission)
+class Student < Person
+  def initialize(classroom, age, name, profession, _parent_permission)
+    super(age, name, profession)
     @classroom = classroom
   end
+
+  attr_accessor :classroom
 
   def play_hooky
     "¯\(ツ)/¯"
   end
 
-  def add_to_classroom
-    new.Classroom(@classroom)
+  def add_to_classroom(label)
+    new.Classroom(label)
   end
 end
