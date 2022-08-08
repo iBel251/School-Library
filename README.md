@@ -11,19 +11,14 @@ A tool to record what books are in the library and who borrows them. The app wil
 
 [Rubocop](https://www.rubocop.org/) is a Ruby static code analyzer (a.k.a. linter) and code formatter. It will enforce many of the guidelines outlined in the community [Ruby Style Guide](https://rubystyle.guide/).
 
-## Set-up linters in your local env
+## Getting started
+To get a local copy up and running follow these simple example steps.
 
-### [RuboCop](https://docs.rubocop.org/en/stable/)
-
-1. Add this line to the `Gemfile`
-   ```
-   gem 'rubocop', '>= 1.0', '< 2.0'
-   ```
-   _not sure how to use Gemfile? Read [this](https://bundler.io/v1.15/guides/bundler_setup.html)._
-2. Run `bundle install`.
-3. Copy [.rubocop.yml](./.rubocop.yml) to the root directory of your project
-4. Run `rubocop`.
-5. Fix linter errors.
+  - copy this link https://github.com/iBel251/School-Library.
+  - go to the directory that you want to clone the repository and clone the repository.
+  - go to the repository folder in your command prompt School-Library.
+  - Open terminal in that folder run `bundle install`.
+  - run `ruby main.rb`
 
 ## Authors
 
