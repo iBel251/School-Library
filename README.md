@@ -31,6 +31,12 @@ A tool to record what books are in the library and who borrows them. The app wil
 - [LinkedIn](https://www.linkedin.com/in/imran-belete/)
 - [Gmail](mailto:ibbimran7@gmail.com)
 
+👤 **Nedjwa Bouraiou**
+
+- GitHub: [@Nedjwab](https://github.com/nedjwab)
+- Twitter: [@nedjwab](https://twitter.com/ned_jwa)
+- LinkedIn: [@Bouraiounedjwa](https://www.linkedin.com/feed/)
+
 ## Acknowledgement
 - Credit to all those whose codes have been used
 
