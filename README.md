@@ -40,6 +40,12 @@ A tool to record what books are in the library and who borrows them. The app wil
 - [Twitter](https://twitter.com/bamsi)
 - [LinkedIn](https://www.linkedin.com/in/bamsi)
 
+👤 **Nedjwa Bouraiou**
+
+- GitHub: [@Nedjwab](https://github.com/nedjwab)
+- Twitter: [@nedjwab](https://twitter.com/ned_jwa)
+- LinkedIn: [@Bouraiounedjwa](https://www.linkedin.com/feed/)
+
 ## Acknowledgement
 
 - Credit to all those whose codes have been used
