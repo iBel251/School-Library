@@ -6,18 +6,8 @@ class Main
     @menu = Menus.new
   end
 
-  def inputs(int)
-    if int == '7'
-      @menu.tree7(int)
-    else
-      @menu.tree1(int)
-      @menu.tree2(int)
-      @menu.tree3(int)
-      @menu.tree4(int)
-      @menu.tree5(int)
-      @menu.tree6(int)
-      starting
-    end
+  def inputs(num)
+    @menu.menu_item(num)
   end
 
   def starting
@@ -29,8 +19,9 @@ class Main
     puts '5 - Create a rental'
     puts '6 - List all rentals for a given id'
     puts '7 - Exit'
-    num = gets.chomp
+    num = gets.to_i
     inputs(num)
+    starting if num != 7
   end
 end
 
