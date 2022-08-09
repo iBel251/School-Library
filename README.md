@@ -1,7 +1,9 @@
 # School-Library
+
 A tool to record what books are in the library and who borrows them. The app will allow you to add new students or teachers , add new books and save records of who borrowed a given book and when.
 
 ## Built With
+
 - Ruby
 - VSCode
 
@@ -9,29 +11,38 @@ A tool to record what books are in the library and who borrows them. The app wil
 
 [Rubocop](https://www.rubocop.org/) is a Ruby static code analyzer (a.k.a. linter) and code formatter. It will enforce many of the guidelines outlined in the community [Ruby Style Guide](https://rubystyle.guide/).
 
-## Set-up linters in your local env
+## Getting started
+To get a local copy up and running follow these simple example steps.
 
-### [RuboCop](https://docs.rubocop.org/en/stable/)
+  - copy this link https://github.com/iBel251/School-Library.
+  - go to the directory that you want to clone the repository and clone the repository.
+  - go to the repository folder in your command prompt School-Library.
+  - Open terminal in that folder run `bundle install`.
+  - run `ruby main.rb`
 
-1. Add this line to the `Gemfile`
-    ```
-    gem 'rubocop', '>= 1.0', '< 2.0'
-    ```
-    *not sure how to use Gemfile? Read [this](https://bundler.io/v1.15/guides/bundler_setup.html).*
-2. Run `bundle install`.
-3. Copy [.rubocop.yml](./.rubocop.yml) to the root directory of your project
-5. Run `rubocop`.
-6. Fix linter errors.
-
-  ## Authors
+## Authors
 
 👤 **Imran Belete**
+
 - [GitHub](https://github.com/iBel251)
 - [Twitter](https://twitter.com/ImranBel251)
 - [LinkedIn](https://www.linkedin.com/in/imran-belete/)
 - [Gmail](mailto:ibbimran7@gmail.com)
 
+👤 **Haji Bamsi**
+
+- [GitHub](https://github.com/bamsi)
+- [Twitter](https://twitter.com/bamsi)
+- [LinkedIn](https://www.linkedin.com/in/bamsi)
+
+👤 **Nedjwa Bouraiou**
+
+- GitHub: [@Nedjwab](https://github.com/nedjwab)
+- Twitter: [@nedjwab](https://twitter.com/ned_jwa)
+- LinkedIn: [@Bouraiounedjwa](https://www.linkedin.com/feed/)
+
 ## Acknowledgement
+
 - Credit to all those whose codes have been used
 
 ## Contributing

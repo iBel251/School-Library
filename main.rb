@@ -1,81 +1,13 @@
-require_relative 'app'
+require_relative 'menus'
 
 # Main class handle all methods
 class Main
   def initialize
-    @app = App.new
+    @menu = Menus.new
   end
 
-  def three1(num)
-    if num == '1'
-      @app.list_books
-      starting
-    else
-      ''
-    end
-  end
-
-  def three2(num)
-    if num == '2'
-      @app.list_persons
-      starting
-    else
-      ''
-    end
-  end
-
-  def three3(num)
-    if num == '3'
-      @app.new_person
-      starting
-    else
-      ''
-    end
-  end
-
-  def three4(num)
-    if num == '4'
-      @app.create_book
-      starting
-    else
-      ''
-    end
-  end
-
-  def three5(num)
-    if num == '5'
-      @app.create_rental
-      starting
-    else
-      ''
-    end
-  end
-
-  def three6(num)
-    if num == '6'
-      @app.list_rental_by_id
-      starting
-    else
-      ''
-    end
-  end
-
-  def three7(num)
-    if num == '7'
-      puts 'Exit'
-    else
-      ''
-    end
-  end
-
-  def inputs(int)
-    three1(int)
-    three2(int)
-    three3(int)
-    three4(int)
-    three5(int)
-    three6(int)
-    three7(int)
+  def inputs(num)
+    @menu.menu_item(num)
   end
 
   def starting
@@ -87,8 +19,9 @@ class Main
     puts '5 - Create a rental'
     puts '6 - List all rentals for a given id'
     puts '7 - Exit'
-    num = gets.chomp
+    num = gets.to_i
     inputs(num)
+    starting if num != 7
   end
 end
 
