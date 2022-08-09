@@ -37,15 +37,17 @@ class App
   end
 
   def list_books
+    puts ('Amount of books in the library : ' + @book_arr.length.to_s)
     @book_arr.each_with_index do |book, key|
-      puts "#{key}) Title: #{book[:title]}, Author: #{book[:author]}"
+      puts "#{key + 1}) Title: #{book[:title]}, Author: #{book[:author]}"
     end
     puts ' '
   end
 
   def list_persons
+    puts ('Total number of persons registered : ' + @person_arr.length.to_s)
     @person_arr.each_with_index do |perso, key|
-      puts "#{key}) [#{perso[:profession]}] Name: #{perso[:name]} ID: #{perso[:id]} Age: #{perso[:age]}"
+      puts "#{key + 1}) [#{perso[:profession]}] Name: #{perso[:name]} ID: #{perso[:id]} Age: #{perso[:age]}"
     end
     puts ' '
   end
@@ -75,14 +77,26 @@ class App
   end
 
   def create_rental
+    person_length = @person_arr.length
+    books_length = @book_arr.length
+    if person_length == 0 or books_length == 0
+      puts '****************************************************'
+      puts '*Error! Please create both persons and books first *'
+      puts '****************************************************'
+      return
+    end
     puts 'Please select a book from the following list by number :'
     list_books
     book = gets.chomp
-    book_to_add = @book_arr[book.to_i]
+    while book.to_i > books_length.to_i
+      puts 'Wrong number! Please choose the correct number again.'
+      book = gets.chomp
+    end
+    book_to_add = @book_arr[book.to_i - 1]
     puts 'Please select a person from the following list by number:'
     list_persons
     person_id = gets.chomp
-    person_to_add = @person_arr[person_id.to_i]
+    person_to_add = @person_arr[person_id.to_i - 1]
     printf 'Date:'
     date_to_add = gets.chomp
     @rental_arr.push({ date: date_to_add, book: book_to_add, person: person_to_add })
