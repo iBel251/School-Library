@@ -8,7 +8,7 @@ class App
   def initialize
     store = DataStore.new
     @book_arr = store.book('r')
-    @person_arr = []
+    @person_arr = store.person('r')
     @rental_arr = []
     @id = 0
   end
@@ -114,5 +114,6 @@ class App
   def exit_page
     store = DataStore.new(@book_arr, @person_arr, @rental_arr)
     store.book('w')
+    store.person('w')
   end
 end
