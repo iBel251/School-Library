@@ -22,7 +22,7 @@ class DataStore
   def person(mode)
     file_name = 'person.json'
     if mode == 'w'
-      data = JSON.generate(@books)
+      data = JSON.generate(@persons)
       @file.write_file(data, file_name)
     else
       @file.read_file(file_name)
