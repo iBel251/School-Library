@@ -2,6 +2,7 @@ require_relative 'person'
 require_relative 'classroom'
 require_relative 'student'
 require_relative 'teacher'
+require_relative 'data_store'
 # Console entry point
 class App
   def initialize
@@ -108,5 +109,12 @@ class App
         Book: #{rental[:book][:title]} Date: #{rental[:date]}"
     end
     puts ' '
+  end
+
+  def exit_page
+    store = DataStore.new(@book_arr, @person_arr, @rental_arr)
+    store.book('w')
+    store.persons('w')
+    store.rentals('w')
   end
 end
