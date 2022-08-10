@@ -29,4 +29,14 @@ class DataStore
       @file.read_file(file_name)
     end
   end
+
+  def rental(mode)
+    file_name = 'rentals.json'
+    if mode == 'w'
+      data = JSON.generate(@rentals)
+      @file.write_file(data, file_name)
+    else
+      @file.read_file(file_name)
+    end
+  end
 end
