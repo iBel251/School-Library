@@ -16,7 +16,7 @@ end
 
 describe CapitalizeDecorator do
   context 'test trimmer class' do
-    it 'should returns names length equals to 10' do
+    it 'should returns the first letter capitalized' do
       person = Person.new(23, 'nedjwa', 'teacher')
       cap = CapitalizeDecorator.new(person)
       expect(cap.correct_name).to eq 'Nedjwa'
