@@ -9,7 +9,7 @@ class App
     store = DataStore.new
     @book_arr = store.book('r')
     @person_arr = store.person('r')
-    @rental_arr = []
+    @rental_arr = store.rental('r')
     @id = 0
   end
 
@@ -115,5 +115,6 @@ class App
     store = DataStore.new(@book_arr, @person_arr, @rental_arr)
     store.book('w')
     store.person('w')
+    store.rental('w')
   end
 end
