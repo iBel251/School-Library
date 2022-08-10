@@ -9,7 +9,7 @@ describe Person do
     @person.correct_name.should eql 'bello'
   end
   it 'returns persons age is 25' do
-    @person.age.should eql 25
+    expect(@person.age).to eql 25
   end
   it 'returns the persons permission is true' do
     @person.can_use_services?.should eql true

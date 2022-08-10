@@ -15,11 +15,12 @@ describe Base do
 end
 
 describe CapitalizeDecorator do
-  before :each do
-    @capitalize = CapitalizeDecorator.new('Nedjwa')
-  end
-  it 'returns the name Nedjwa' do
-    @capitalize.nameable.should eql 'Nedjwa'
+  context 'test trimmer class' do
+    it 'should returns names length equals to 10' do
+      person = Person.new(23, 'nedjwa', 'teacher')
+      cap = CapitalizeDecorator.new(person)
+      expect(cap.correct_name).to eq 'Nedjwa'
+    end
   end
 end
 
