@@ -1,3 +1,4 @@
+require 'pry'
 require_relative 'app'
 
 # Options to choose
@@ -21,7 +22,7 @@ class Menus
     when 6
       @app.list_rental_by_id
     else
-      puts 'Exit'
+      @app.exit_page
     end
   end
 end

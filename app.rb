@@ -2,12 +2,14 @@ require_relative 'person'
 require_relative 'classroom'
 require_relative 'student'
 require_relative 'teacher'
+require_relative 'data_store'
 # Console entry point
 class App
   def initialize
-    @book_arr = []
-    @person_arr = []
-    @rental_arr = []
+    store = DataStore.new
+    @book_arr = store.book('r')
+    @person_arr = store.person('r')
+    @rental_arr = store.rental('r')
     @id = 0
   end
 
@@ -39,7 +41,7 @@ class App
   def list_books
     puts("Amount of books in the library : #{@book_arr.length}")
     @book_arr.each_with_index do |book, key|
-      puts "#{key + 1}) Title: #{book[:title]}, Author: #{book[:author]}"
+      puts "#{key + 1}) Title: #{book['title']}, Author: #{book['author']}"
     end
     puts ' '
   end
@@ -47,7 +49,7 @@ class App
   def list_persons
     puts("Total number of persons registered : #{@person_arr.length}")
     @person_arr.each_with_index do |perso, key|
-      puts "#{key + 1}) [#{perso[:profession]}] Name: #{perso[:name]} ID: #{perso[:id]} Age: #{perso[:age]}"
+      puts "#{key + 1}) [#{perso['profession']}] Name: #{perso['name']} ID: #{perso['id']} Age: #{perso['age']}"
     end
     puts ' '
   end
@@ -101,12 +103,18 @@ class App
     puts 'Enter a person Id to see he\'s rentals'
     printf 'Id:'
     id = gets.chomp
-    find_rentals = @rental_arr.select { |rental| rental[:person][:id] == id }
+    find_rentals = @rental_arr.select { |rental| rental['person']['id'] == id }
     puts 'Rentals:'
     find_rentals.each_with_index do |rental, idx|
-      puts "#{idx + 1}) Name: #{rental[:person][:name]},
-        Book: #{rental[:book][:title]} Date: #{rental[:date]}"
+      puts "#{idx + 1}) Name: #{rental['person']['name']}, Book: #{rental['book']['title']} Date: #{rental['date']}"
     end
     puts ' '
+  end
+
+  def exit_page
+    store = DataStore.new(@book_arr, @person_arr, @rental_arr)
+    store.book('w')
+    store.person('w')
+    store.rental('w')
   end
 end
