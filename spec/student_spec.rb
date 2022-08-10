@@ -8,7 +8,7 @@ describe Student do
   it 'takes five parameters and returns a student object' do
     @student.should be_an_instance_of Student
   end
-  it 'returns persons age is 25' do
+  it 'returns persons age is 23' do
     @student.age.should eql 23
   end
   it 'returns the persons classroom is history' do
