@@ -7,7 +7,7 @@ A tool to record what books are in the library and who borrows them. The app wil
 - Ruby
 - VSCode
 
-## Set-up Rubocop GitHub Action
+## Set-up Rubocop GitHub Action 
 
 [Rubocop](https://www.rubocop.org/) is a Ruby static code analyzer (a.k.a. linter) and code formatter. It will enforce many of the guidelines outlined in the community [Ruby Style Guide](https://rubystyle.guide/).
 
@@ -43,7 +43,7 @@ To get a local copy up and running follow these simple example steps.
 
 ## Acknowledgement
 
-- Credit to all those whose codes have been used
+- Credit to all those whose codes have been used and all those who contributed on this repository.
 
 ## Contributing
 
